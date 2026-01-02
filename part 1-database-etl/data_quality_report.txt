@@ -1,0 +1,4 @@
+Duplicate Customers removed
+Null emails replaced
+Invalid Sales removed
+referential integrity validated
