@@ -1,0 +1,112 @@
+
+-- INSERT INTO dim_date (30 rows)
+INSERT INTO dim_date VALUES
+(20240101,'2024-01-01','Monday',1,1,'January','Q1',2024,FALSE),
+(20240102,'2024-01-02','Tuesday',2,1,'January','Q1',2024,FALSE),
+(20240103,'2024-01-03','Wednesday',3,1,'January','Q1',2024,FALSE),
+(20240104,'2024-01-04','Thursday',4,1,'January','Q1',2024,FALSE),
+(20240105,'2024-01-05','Friday',5,1,'January','Q1',2024,FALSE),
+(20240106,'2024-01-06','Saturday',6,1,'January','Q1',2024,TRUE),
+(20240107,'2024-01-07','Sunday',7,1,'January','Q1',2024,TRUE),
+(20240108,'2024-01-08','Monday',8,1,'January','Q1',2024,FALSE),
+(20240109,'2024-01-09','Tuesday',9,1,'January','Q1',2024,FALSE),
+(20240110,'2024-01-10','Wednesday',10,1,'January','Q1',2024,FALSE),
+(20240111,'2024-01-11','Thursday',11,1,'January','Q1',2024,FALSE),
+(20240112,'2024-01-12','Friday',12,1,'January','Q1',2024,FALSE),
+(20240113,'2024-01-13','Saturday',13,1,'January','Q1',2024,TRUE),
+(20240114,'2024-01-14','Sunday',14,1,'January','Q1',2024,TRUE),
+(20240115,'2024-01-15','Monday',15,1,'January','Q1',2024,FALSE),
+(20240116,'2024-01-16','Tuesday',16,1,'January','Q1',2024,FALSE),
+(20240117,'2024-01-17','Wednesday',17,1,'January','Q1',2024,FALSE),
+(20240118,'2024-01-18','Thursday',18,1,'January','Q1',2024,FALSE),
+(20240119,'2024-01-19','Friday',19,1,'January','Q1',2024,FALSE),
+(20240120,'2024-01-20','Saturday',20,1,'January','Q1',2024,TRUE),
+(20240201,'2024-02-01','Thursday',1,2,'February','Q1',2024,FALSE),
+(20240202,'2024-02-02','Friday',2,2,'February','Q1',2024,FALSE),
+(20240203,'2024-02-03','Saturday',3,2,'February','Q1',2024,TRUE),
+(20240204,'2024-02-04','Sunday',4,2,'February','Q1',2024,TRUE),
+(20240205,'2024-02-05','Monday',5,2,'February','Q1',2024,FALSE),
+(20240206,'2024-02-06','Tuesday',6,2,'February','Q1',2024,FALSE),
+(20240207,'2024-02-07','Wednesday',7,2,'February','Q1',2024,FALSE),
+(20240208,'2024-02-08','Thursday',8,2,'February','Q1',2024,FALSE),
+(20240209,'2024-02-09','Friday',9,2,'February','Q1',2024,FALSE),
+(20240210,'2024-02-10','Saturday',10,2,'February','Q1',2024,TRUE);
+
+
+-- INSERT INTO dim_product (15 rows)
+INSERT INTO dim_product (product_id, product_name, category, subcategory, unit_price) VALUES
+('P001','Laptop','Electronics','Computers',55000),
+('P002','Smartphone','Electronics','Mobiles',30000),
+('P003','Headphones','Electronics','Audio',2500),
+('P004','LED TV','Electronics','Television',65000),
+('P005','Office Chair','Furniture','Chairs',7000),
+('P006','Dining Table','Furniture','Tables',45000),
+('P007','Sofa','Furniture','Seating',60000),
+('P008','Bed','Furniture','Bedroom',80000),
+('P009','T-Shirt','Clothing','Topwear',800),
+('P010','Jeans','Clothing','Bottomwear',2500),
+('P011','Jacket','Clothing','Outerwear',5000),
+('P012','Shoes','Clothing','Footwear',3500),
+('P013','Watch','Electronics','Accessories',12000),
+('P014','Tablet','Electronics','Devices',40000),
+('P015','Wardrobe','Furniture','Storage',90000);
+
+
+-- INSERT INTO dim_customer (12 rows)
+INSERT INTO dim_customer (customer_id, customer_name, city, state, customer_segment) VALUES
+('C001','Amit Sharma','Mumbai','Maharashtra','Consumer'),
+('C002','Neha Verma','Delhi','Delhi','Corporate'),
+('C003','Ravi Kumar','Bengaluru','Karnataka','Consumer'),
+('C004','Priya Iyer','Chennai','Tamil Nadu','Home Office'),
+('C005','Suresh Patel','Ahmedabad','Gujarat','Consumer'),
+('C006','Anjali Mehta','Pune','Maharashtra','Corporate'),
+('C007','Rahul Singh','Noida','Uttar Pradesh','Consumer'),
+('C008','Kiran Rao','Hyderabad','Telangana','Home Office'),
+('C009','Vikram Joshi','Jaipur','Rajasthan','Consumer'),
+('C010','Sneha Das','Kolkata','West Bengal','Corporate'),
+('C011','Arjun Malhotra','Chandigarh','Punjab','Consumer'),
+('C012','Meena Nair','Kochi','Kerala','Home Office');
+
+
+-- INSERT INTO fact_sales (40 rows)
+INSERT INTO fact_sales
+(date_key, product_key, customer_key, quantity_sold, unit_price, discount_amount, total_amount)
+VALUES
+(20240101,1,1,1,55000,5000,50000),
+(20240102,2,2,2,30000,3000,57000),
+(20240103,3,3,3,2500,0,7500),
+(20240104,4,4,1,65000,5000,60000),
+(20240105,5,5,2,7000,0,14000),
+(20240106,6,6,1,45000,5000,40000),
+(20240107,7,7,1,60000,0,60000),
+(20240108,8,8,1,80000,10000,70000),
+(20240109,9,9,5,800,0,4000),
+(20240110,10,10,2,2500,0,5000),
+(20240111,11,11,1,5000,500,4500),
+(20240112,12,12,2,3500,0,7000),
+(20240113,13,1,1,12000,1000,11000),
+(20240114,14,2,1,40000,5000,35000),
+(20240115,15,3,1,90000,10000,80000),
+(20240116,1,4,2,55000,5000,105000),
+(20240117,2,5,1,30000,0,30000),
+(20240118,3,6,4,2500,0,10000),
+(20240119,4,7,1,65000,5000,60000),
+(20240120,5,8,3,7000,0,21000),
+(20240201,6,9,1,45000,0,45000),
+(20240202,7,10,1,60000,5000,55000),
+(20240203,8,11,1,80000,10000,70000),
+(20240204,9,12,6,800,0,4800),
+(20240205,10,1,2,2500,0,5000),
+(20240206,11,2,1,5000,500,4500),
+(20240207,12,3,2,3500,0,7000),
+(20240208,13,4,1,12000,1000,11000),
+(20240209,14,5,1,40000,0,40000),
+(20240210,15,6,1,90000,15000,75000),
+(20240106,1,7,1,55000,0,55000),
+(20240107,2,8,2,30000,2000,58000),
+(20240113,3,9,3,2500,0,7500),
+(20240114,4,10,1,65000,5000,60000),
+(20240120,5,11,2,7000,0,14000),
+(20240203,6,12,1,45000,0,45000),
+(20240204,7,1,1,60000,5000,55000),
+(20240210,8,2,1,80000,10000,70000);

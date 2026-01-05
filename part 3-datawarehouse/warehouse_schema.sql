@@ -14,7 +14,7 @@ CREATE TABLE dim_date (
 );
 
 CREATE TABLE dim_product (
-    product_key INT PRIMARY KEY AUTO_INCREMENT,
+    product_key INT PRIMARY KEY,
     product_id VARCHAR(20),
     product_name VARCHAR(100),
     category VARCHAR(50),
@@ -23,7 +23,7 @@ CREATE TABLE dim_product (
 );
 
 CREATE TABLE dim_customer (
-    customer_key INT PRIMARY KEY AUTO_INCREMENT,
+    customer_key INT PRIMARY KEY,
     customer_id VARCHAR(20),
     customer_name VARCHAR(100),
     city VARCHAR(50),
@@ -32,7 +32,7 @@ CREATE TABLE dim_customer (
 );
 
 CREATE TABLE fact_sales (
-    sale_key INT PRIMARY KEY AUTO_INCREMENT,
+    sale_key INT PRIMARY KEY,
     date_key INT NOT NULL,
     product_key INT NOT NULL,
     customer_key INT NOT NULL,

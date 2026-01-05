@@ -6,7 +6,6 @@
 **Date:** [02-01-2026]
 
 
-
 ## Repository Structure
 ├── part1-database-etl/
 │   ├── etl_pipeline.py
@@ -26,11 +25,10 @@
 
 ## Technologies Used
 
-- Python 3.x, pandas, mysql-connector-python
-- MySQL 8.0 
-- MongoDB 6.0
-
-## Setup Instructions
+- Python, pandas
+- mysql-connector-python
+- MySQL 
+- MongoDB 
 
 ### Database Setup
 
@@ -51,9 +49,10 @@ mysql -u root -p fleximart_dw < part3-datawarehouse/warehouse_data.sql
 mysql -u root -p fleximart_dw < part3-datawarehouse/analytics_queries.sql
 
 
-### MongoDB Setup
+## Challenges Faced
 
-mongosh < part2-nosql/mongodb_operations.js
+Whole Assignment was a Challenge as it was very less practically tought and assigment is advaced level.
+
 
 
 
